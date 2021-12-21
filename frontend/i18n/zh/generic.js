@@ -10,11 +10,14 @@ export default {
   upload: '上传',
   add: '增加',
   delete: '删除',
+  deleteAll: "删除全部",
   search: '搜索',
   name: '名称',
   import: '导入',
   export: '导出',
   description: '描述',
   type: '类型',
-  loading: '加载中... 请等待'
+  loading: '加载中... 请等待',
+  updated: '更新',
+  tags: '标签'
 }

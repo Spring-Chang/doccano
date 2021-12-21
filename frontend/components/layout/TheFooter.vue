@@ -15,7 +15,7 @@
         white--text
         xs12
       >
-        &copy; {{ new Date().getFullYear() }} doccano
+        &copy; {{ new Date().getFullYear() }} 中译语通-全球语言智能技术研究院
       </v-flex>
     </v-layout>
   </v-footer>

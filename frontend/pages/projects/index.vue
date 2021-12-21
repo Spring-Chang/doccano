@@ -48,7 +48,7 @@ import FormDelete from '~/components/project/FormDelete.vue'
 import FormCreate from '~/components/project/FormCreate.vue'
 
 export default Vue.extend({
-
+  name: "project",
   components: {
     FormCreate,
     FormDelete,

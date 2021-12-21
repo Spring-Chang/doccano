@@ -45,13 +45,13 @@
         <v-checkbox
           v-if="hasSingleLabelOption"
           :value="singleClassClassification"
-          label="Allow single label"
+          :label="$t('overview.allowSingleLabel')"
           @change="updateValue('singleClassClassification', $event === true)"
         />
         <v-checkbox
           v-if="isSequenceLabelingProject"
           :value="allowOverlapping"
-          label="Allow overlapping entity"
+          :label="$t('overview.allowOverlappingEntity')"
           @change="updateValue('allowOverlapping', $event === true)"
         />
         <v-img

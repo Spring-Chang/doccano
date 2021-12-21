@@ -38,6 +38,7 @@
 import { mdiHome, mdiDatabase, mdiCog, mdiChartBar, mdiBookOpenOutline, mdiCommentAccountOutline, mdiLabel, mdiAccount, mdiPlayCircleOutline } from '@mdi/js'
 
 export default {
+  name: 'theSideBar',
   props: {
     link: {
       type: String,
@@ -65,13 +66,20 @@ export default {
 
   computed: {
     filteredItems() {
+      // 重新排列菜单
       const items = [
+        // {
+        //   icon: mdiHome,
+        //   text: this.$t('projectHome.home'),
+        //   link: '',
+        //   isVisible: true
+        // },
         {
           icon: mdiHome,
           text: this.$t('projectHome.home'),
-          link: '',
-          isVisible: true
-        },
+          link: 'statistics',
+          isVisible: this.role.is_project_admin
+        },        
         {
           icon: mdiDatabase,
           text: this.$t('dataset.dataset'),
@@ -86,7 +94,7 @@ export default {
         },
         {
           icon: mdiLabel,
-          text: 'Relations',
+          text: '关系',
           link: 'links',
           isVisible: this.role.is_project_admin && this.project.canDefineRelation
         },
@@ -96,24 +104,18 @@ export default {
           link: 'members',
           isVisible: this.role.is_project_admin
         },
-        {
-          icon: mdiCommentAccountOutline,
-          text: 'Comments',
-          link: 'comments',
-          isVisible: this.role.is_project_admin
-        },
-        {
-          icon: mdiBookOpenOutline,
-          text: this.$t('guideline.guideline'),
-          link: 'guideline',
-          isVisible: this.role.is_project_admin
-        },
-        {
-          icon: mdiChartBar,
-          text: this.$t('statistics.statistics'),
-          link: 'statistics',
-          isVisible: this.role.is_project_admin
-        },
+        // {
+        //   icon: mdiCommentAccountOutline,
+        //   text: 'Comments',
+        //   link: 'comments',
+        //   isVisible: this.role.is_project_admin
+        // },
+        // {
+        //   icon: mdiBookOpenOutline,
+        //   text: this.$t('guideline.guideline'),
+        //   link: 'guideline',
+        //   isVisible: this.role.is_project_admin
+        // },
         {
           icon: mdiCog,
           text: this.$t('settings.title'),

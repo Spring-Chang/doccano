@@ -27,7 +27,7 @@
       />
     </template>
     <template #[`item.name`]="{ item }">
-      <nuxt-link :to="localePath(`/projects/${item.id}`)">
+      <nuxt-link :to="localePath(`/projects/${item.id}/statistics`)">
         <span>{{ item.name }}</span>
       </nuxt-link>
     </template>
@@ -53,6 +53,7 @@ Vue.use(VueFilterDateFormat)
 Vue.use(VueFilterDateParse)
 
 export default Vue.extend({
+  name: 'projectList',
   props: {
     isLoading: {
       type: Boolean,
@@ -83,8 +84,8 @@ export default Vue.extend({
         { text: this.$t('generic.name'), value: 'name' },
         { text: this.$t('generic.description'), value: 'description' },
         { text: this.$t('generic.type'), value: 'projectType' },
-        { text: 'Updated', value: 'updatedAt' },
-        { text: 'Tags', value: 'tags'}
+        { text: this.$t('generic.updated'), value: 'updatedAt' },
+        { text: this.$t('generic.tags'), value: 'tags'}
       ]
     }
   }

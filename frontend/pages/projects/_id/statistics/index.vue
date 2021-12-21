@@ -44,7 +44,7 @@
       lg="4"
     >
       <v-card>
-        <v-card-title>Label Stats</v-card-title>
+        <v-card-title>{{ $t('statistics.labelStats') }}</v-card-title>
         <v-card-text>
           <bar-chart
             :chart-data="stats.label"
@@ -57,7 +57,7 @@
       lg="4"
     >
       <v-card>
-        <v-card-title>User Stats</v-card-title>
+        <v-card-title>{{ $t('statistics.userStats') }}</v-card-title>
         <v-card-text>
           <bar-chart
             :chart-data="stats.user"

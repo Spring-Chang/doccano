@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" class="loginCont">
     <v-main>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
@@ -29,3 +29,14 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style scoped>
+.loginCont {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/login.jpg);
+  background-size: 100% 100%;
+}
+</style>

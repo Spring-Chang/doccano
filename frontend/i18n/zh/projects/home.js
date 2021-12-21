@@ -7,5 +7,6 @@ export default {
   defineGuideline: '定义指南',
   annotateDataset: '标注数据集',
   viewStatistics: '查看统计',
-  exportDataset: '导出数据集'
+  exportDataset: '导出数据集',
+  settings: '设置'
 }

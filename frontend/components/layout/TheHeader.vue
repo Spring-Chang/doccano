@@ -15,7 +15,7 @@
       v-if="!isAuthenticated"
       class="ml-2 d-none d-sm-flex"
     >
-      doccano
+      GTCOM
     </v-toolbar-title>
     <v-btn
       v-if="isAuthenticated && isIndividualProject"
@@ -29,8 +29,10 @@
       <span> {{ currentProject.name }}</span>
     </v-btn>
     <div class="flex-grow-1" />
-    <the-color-mode-switcher />
-    <locale-menu />
+    <!--注销主题模块-->
+    <!-- <the-color-mode-switcher /> -->
+    <!--注销国际化语言模块-->
+    <!-- <locale-menu /> -->
     <v-btn
       v-if="isAuthenticated"
       text
@@ -114,8 +116,8 @@ import LocaleMenu from './LocaleMenu'
 
 export default {
   components: {
-    TheColorModeSwitcher,
-    LocaleMenu
+    // TheColorModeSwitcher,
+    // LocaleMenu
   },
 
   data() {
